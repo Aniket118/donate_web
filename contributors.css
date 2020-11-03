@@ -1,0 +1,145 @@
+header{
+	background-image: url('https://www.unicef-irc.org/files/images/1193-land_0-uni192128-med-res.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 380px;
+	padding-top: -5px;
+	margin: 10px;
+	margin-bottom: -10px;
+	background-color: white; 
+}
+body{
+	margin: -30px;
+	padding: 10px;
+	background-color: #F5CBA7;
+}
+.buttons{
+	background: rgba(255, 255, 255, 0.5);
+	margin-left: 100px;
+	margin-top: 10px;
+	border: none;
+	width: 120px;
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+}
+.active, .buttons:visited{
+	background-color: white;
+}
+img{
+	width: 190px;
+	height: 100px;
+	border: 2px solid black;
+	margin: 1px;
+	margin-top: 30px;
+	margin-left: 25px;
+	display: block;
+}
+.pic{
+	background-color: #AF601A;
+	width: 250px;
+	height: 500px;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 5px;
+}
+h1{
+	font-variant: small-caps;
+	text-align: center;
+	color: #6E2C00;
+	font-size: 30px;
+}
+h2{
+	color: #341A02 ;
+	font-variant: normal;
+	margin: 0 auto;
+	font-size: 26px;
+	font-family: "Times New Roman", arial;
+	font-weight: bold;
+}
+section{
+	width: 1000px;
+	margin-left: 55px;
+	font-size: 18px;
+	font-family: verdana, arial;
+}
+table{
+	font-family: "Times New Roman", "comic sans ms", arial, verdana;
+	font-size: 14px;
+	font-weight: 10px;
+	line-height: 10px;
+	width: 650px;
+	height: 350px;
+	margin-left: 100px;
+}
+
+th{
+	background:-moz-linear-gradient(top, #E67E22  0%,  #AF601A 100%);
+	background:-webkit-linear-gradient(top, #E67E22  0%,  #AF601A 100%);
+	background:-o-linear-gradient(top, #E67E22  0%,  #AF601A 100%);
+	background:linear-gradient(top, #E67E22  0%,  #AF601A 100%);
+	font-size: 16px;
+	width: 300px;
+	height: 30px;
+	color:#ffffff;
+	margin-right: 50px;
+	padding: 5px;
+	border-bottom-color: #9ACD32;
+	border-bottom-style: outset;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+th:first-child
+{
+	text-align:left;
+}
+tr td:first-child
+{
+	text-align:left;
+}
+td{
+	padding: 10px;
+	font-size: 15px;
+	color:	#505050;
+	font-family: "Times New Roman", arial;
+	width: 100px;
+	border-radius: 2px;
+	text-shadow: transparent;
+	font-weight: bold;
+	background-color: #E6E6FA;
+}
+p{
+	font-family:  "Times New Roman",verdana, arial;
+	font-size: 18px;
+	color: black;
+}
+td{
+	opacity: 0.8;
+}
+td:hover{
+	opacity: 1;
+}
+.two{
+	width: 100px;
+	color: #ffffff;
+}
+.right{
+	margin-top: -510px;
+	margin-left: 5px;
+}
+.middle{
+	text-align: center;
+}
+#bg{
+	width: 1100px;
+	height: 510px;
+	margin: 0 auto;
+	margin-left: 270px;
+	border-bottom-color: #D3D3D3;
+	background-color:  #F0B27A;
+	box-shadow: 0px 15px 10px -15px #8c8c8c;    
+}
+

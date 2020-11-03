@@ -1,0 +1,229 @@
+header{
+	background-image: url('https://cdn.givind.org/static/images/home/no-child-hungry-desktop-banner-v1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 380px;
+	padding-top: -30px;
+	/*margin: 10px;*/
+	margin-bottom: -10px;
+	background-color: black; 
+	/*margin-top: 30px;*/
+}
+body{
+	margin: -30px;
+	padding: 10px;
+	background-color: #F5CBA7;
+	height: 1250px;
+}
+.button{
+	background: rgba(255, 255, 255, 0.5);
+	margin-left: 90px;
+	margin-top: -500px;
+	border: none;
+	width: 130px;
+	padding: 10px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 5px;
+}
+.active, .button:hover{
+	color: darkblue;
+	background: white;
+}
+a{
+	color: black;
+	margin: 5px;
+	text-decoration: none;
+	background-color: black;
+}
+a:focus{
+	background: white;
+	color: darkblue;
+}
+h1{
+	font-variant: small-caps;
+	text-align: center;
+	color: #F0B27A;
+	font-size: 30px;
+	margin-top: 5px;
+}
+h2{
+	color: #000000;
+	font-variant: normal;
+	margin: 0 auto;
+	font-family: Times New Roman;\
+	
+}
+
+section{
+	width: 1000px;
+	height: 100px;
+	margin-top: -440px;
+	margin-left: 275px;
+	font-size: 18px;
+	font-family: verdana, arial;
+	text-align: justify;
+}
+form{
+	margin-left: 450px;
+}
+img{
+	width: 190px;
+	height: 90px;
+	border: 2px solid black;
+	margin: 1px;
+	margin-top: 30px;
+	margin-left: 25px;
+	display: block;
+	/*padding: 20px*/
+}
+.pics{
+	background-color: #943126;
+	width: 250px;
+	height: 447px;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 5px;
+}
+
+ .card{ 
+	width: 250px; 
+	height: 250px; 
+	perspective: 1000px; 
+	margin-top: 400px;
+	margin-left: 100px;
+} 
+.card-inner { 
+	position: relative; 
+	text-align: center; 
+	transition: transform 0.6s; 
+	transform-style: preserve-3d; 
+} 
+.card:hover .card-inner { 
+	transform: rotateY(180deg); 
+} 
+.card-front, .card-back { 
+	position: absolute; 
+	backface-visibility: hidden; 
+} 
+.card-back { 
+	transform: rotateY(180deg); 
+} 
+
+
+.zeit-logo {
+  color: white;
+  display: block;
+
+  margin-right: 20px;
+}
+
+.zeit-logo .triangle {
+  display: inline-block;
+  vertical-align: baseline;
+
+  width: 0;
+  height: 0;
+
+  border-bottom: 23px solid white;
+  border-left: 23px solid transparent;
+  border-right: 23px solid transparent;
+}
+
+.zeit-logo .logo-text {
+  display: inline-block;
+  font-size: 26px;
+}
+
+.footer {
+  font-size: 12px;
+  color: #666;
+  margin-top: 150px;
+  background-color: black;
+  margin-bottom: 0px;
+  height: 120px;
+}
+
+.footer .wrapper {
+  margin: 20px auto;
+  padding: 10px;
+
+  max-width: 1100px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.footer a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer .mini-nav {
+  margin: 0 100px 0 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer .mini-nav .mini-nav-item {
+  height: 25px;
+  line-height: 20px;
+  vertical-align: middle;
+}
+
+.nav-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-link .icon svg {
+  fill: currentColor;
+}
+
+.footer .right-nav .social-nav {
+  text-align: right;
+  margin: 10px 0px;
+  margin-bottom: 20px;
+}
+
+.footer .right-nav .social-nav a {
+  padding-right: 5px;
+}
+
+.footer .right-nav .social-nav a:nth-last-of-type(n + 2) {
+  border-right: 1px solid #666;
+}
+
+@media all and (max-width: 750px) {
+  .footer .wrapper {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .footer .mini-nav {
+    display: flex;
+  }
+
+  .footer .zeit-logo {
+    margin: 10px;
+  }
+
+  .footer .mini-nav {
+    margin: 15px auto;
+  }
+
+  .footer .mini-nav .mini-nav-item {
+    padding-right: 15px;
+  }
+
+  .footer .right-nav .social-nav {
+    text-align: center;
+  }
+}
