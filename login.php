@@ -1,25 +1,5 @@
-<?php 
+<?php include('server.php') ?>
 
-if(isset($_POST['login'])) {
-    $user = $_POST['email'];
-    $pass = $_POST['pass'];
-
-    require('db.php'); 
-    $stid = oci_parse($conn, sprintf("SELECT * FROM users WHERE email='%s' AND pass='%s'", $user, $pass));
-    oci_execute($stid);
-    oci_fetch_all($stid, $row);
-
-    if (oci_num_rows($stid) == 1) {
-      
-      header("Location: index.php");
-      exit();
-    }
-    
-    oci_free_statement($stid);
-    oci_close($conn);
-
-}
-?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -436,7 +416,7 @@ if(isset($_POST['login'])) {
     </style>
 </head>
 <body>
-    <form method="post" action="javascript: void(0);" id="login-form" class="login-form" autocomplete="off" role="main">
+    <form method="post" action="login.php" id="login-form" class="login-form" autocomplete="off" role="main">
         <h1 class="a11y-hidden">sign Up</h1>
         <div>
             <!-- <label class="name">
@@ -444,7 +424,7 @@ if(isset($_POST['login'])) {
                 <span class="required">Name</span>
             </label> -->
             <label class="label-email">
-                <input type="email" class="text" name="email" placeholder="Email" tabindex="1" required />
+                <input type="text" class="text" name="username" placeholder="Name" tabindex="1" required />
                 <span class="required">Username</span>
             </label>
         </div>
@@ -459,7 +439,12 @@ if(isset($_POST['login'])) {
             </label>
         </div>
 
-        <input type="submit" value="Log In" class="final" onclick="location.href='index.html';" />
+        <input type="submit" name="login_user" value="Log In" class="final"  />
+
+        <div class="email">
+            
+            Not a user? <a href="registration.php"> Sign Up</a>
+        </div>
       <!--   <div class="email">
             
             <a href="login.html"> Log In</a>

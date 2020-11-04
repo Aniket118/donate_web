@@ -1,3 +1,26 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){ // for particular session check for username
+
+	$_SESSION['msg'] = "You must login for view this page";
+	header("location: login.php");
+
+}
+
+if(isset($_GET['logout'])){
+
+	session_destroy();
+	unset($_SESSION['username']);
+	header("location: login.php");
+}
+if(isset($_GET['contactus'])){
+
+	header("location: contactus.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +28,21 @@
 	<title>Gracious Givers - Home</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+<span><?php if(isset($_SESSION['username'])) : ?>
+			<h3 style="text-align: center;"> Welcome <STRONG><?php echo $_SESSION['username']; ?></STRONG></h3></span>
+			<?php endif ?>
 <h1 style="font-size: 50px; margin-top: 20px;  background-color: #641E16; height: 250px; padding-bottom: 10px;">Gracious Givers</h1>
 		<nav style="margin-top: -170px; margin-bottom: 20px;">
-			<a href="index.html" target="_blank" class="button active">Home</a>
-			<a href="contributors.html" target="_blank" class="button">Contributors</a>
-			<a href="aboutus.html" target="_blank" class="button">About Us</a>
-			<a href="contactus.html" target="_blank" class="button">Contact Us</a>
-			<a href="signup.html" class="button">Sign Up/ Login</a>
+			<a href="index.php" target="_blank" class="button active">Home</a>
+			<a href="contributors.php" target="_blank" class="button">Contributors</a>
+			<a href="aboutus.php" target="_blank" class="button">About Us</a>
+			<a href="index.php?contactus='1'" class="button">Contact Us</a>
+			<a href="signup.php" class="button">Sign Up/ Login</a>
+			<a href="index.php?logout='1'" class="button">Logout</a>
 		</nav>
 <body>
+
+		
 
 	<div class="topbar">
 
@@ -39,6 +68,14 @@
 			<img src="https://www.politicususa.com/wp-content/uploads/2012/12/hungry-child-1.jpg"></a>
 		</aside>
 		</div>
+
+		<!-- if any particular user login information about user -->
+
+		<!-- <?php if(isset($_SESSION['username'])) : ?>
+			<h3> Welcome <STRONG><?php echo $_SESSION['username']; ?></STRONG></h3> -->
+
+
+
 
 			<section class = "right">
 				<h2 style="padding-left: 25px;">Provide nutritious food for hungry children, now</h2>
@@ -167,5 +204,7 @@ Provide nutrition for the development and growth of all children. All it takes i
 
 </div>
 
+
+<?php endif ?>
 </body>
 </html>

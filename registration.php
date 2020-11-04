@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -414,11 +415,13 @@
     </style>
 </head>
 <body>
-    <form method="post" action="javascript: void(0);" id="login-form" class="login-form" autocomplete="off" role="main">
+    <form method="post" action="registration.php" id="login-form" class="login-form" autocomplete="off" role="main">
+
+        <?php include('errors.php') ?> 
         <h1 class="a11y-hidden">sign Up</h1>
         <div>
             <label class="name">
-                <input type="text" class="text" name="name" placeholder="Name" tabindex="1" required/>
+                <input type="text" class="text" name="username" placeholder="Name" tabindex="1" required/>
                 <span class="required">Name</span>
             </label>
             <label class="label-email">
@@ -437,7 +440,7 @@
             </label>
         </div>
 
-        <input type="submit" value="Sign In" class="final" onclick="location.href='index.html';" />
+        <input type="submit" name="reg_user" value="Sign In" class="final"/>
         <div class="email">
             
             Already Have an account- <a href="login.php"> Log In</a>
